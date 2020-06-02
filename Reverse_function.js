@@ -1,15 +1,15 @@
-// This function is aiming to reverse a list of geographical objects 
+// The purpose of this function is to reverse a list of geographic coordinates.
 
 const reversing_coordinate = (geo_obj) => { 
-    let new_coordinates = geo_obj
-    if (!new_coordinates){ 
+    let new_geobj = geo_obj
+    if (!new_geobj){ 
 
             throw new Error('the object must not be empty or null', new_coordinates)
     } else { 
         
-        for (let i = 0; i < new_coordinates.length; i++){ 
-            let coordinates_obj = new_coordinates[i].features[0].geometry.coordinates;
-            let typeof_geobj = new_coordinates[i].features[0].geometry.type;
+        for (let i = 0; i < new_geobj.length; i++){ 
+            let coordinates_obj = new_geobj[i].features[0].geometry.coordinates;
+            let typeof_geobj = new_geobj[i].features[0].geometry.type;
             
             if (typeof_geobj === "Polygon" || typeof_geobj === "LineString"){ 
                 // case when we have a multiple coordinates or and Array of coordinates
@@ -23,6 +23,6 @@ const reversing_coordinate = (geo_obj) => {
             }
         }
     }
-    return new_coordinates;
+    return new_geobj;
 
 }
