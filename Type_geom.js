@@ -4,7 +4,7 @@ However if the type of the geometry is missing, i made a function that give us t
 const typeof_geometryJson = (obj) => { 
     let Geojson_with_type = obj
     if (!Geojson_with_type){ 
-           throw new Error('the object is null', Geojson_with_type);
+           throw new Error('the obje must contains something', Geojson_with_type);
    } else { 
            let features_geom = Geojson_with_type.features 
            for (var i = 0; i < features_geom.length; i++){ 
