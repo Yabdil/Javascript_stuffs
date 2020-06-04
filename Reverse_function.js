@@ -4,7 +4,7 @@ const reversing_coordinate = (geo_obj) => {
     let new_geobj = geo_obj
     if (!new_geobj){ 
 
-            throw new Error('the object must not be empty or null', new_coordinates)
+            throw new Error('the object must not be empty or null', new_geobj)
     } else { 
         
         for (let i = 0; i < new_geobj.length; i++){ 
